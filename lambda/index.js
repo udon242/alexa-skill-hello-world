@@ -8,7 +8,7 @@ const LaunchRequestHandler = {
         return Alexa.getRequestType(handlerInput.requestEnvelope) === 'LaunchRequest';
     },
     handle(handlerInput) {
-        const speakOutput = 'いらっしゃいませ、こんにちはと言ってもいいし、ヘルプと言ってもいい。どちらを試してみたいと思いますか？';
+        const speakOutput = 'ハローワールド、またはヘルプと言ってください';
         return handlerInput.responseBuilder
             .speak(speakOutput)
             .reprompt(speakOutput)
@@ -34,7 +34,7 @@ const HelpIntentHandler = {
             && Alexa.getIntentName(handlerInput.requestEnvelope) === 'AMAZON.HelpIntent';
     },
     handle(handlerInput) {
-        const speakOutput = 'You can say hello to me! How can I help?';
+        const speakOutput = 'ヘルプです';
 
         return handlerInput.responseBuilder
             .speak(speakOutput)
